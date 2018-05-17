@@ -26,9 +26,9 @@ app.use((req,res,next)=>{
 next()
 })
 
-app.use((req,res,next)=>{
-    return res.render('maintainance.html')
-})
+// app.use((req,res,next)=>{
+//     return res.render('maintainance.html')
+// })
 
 app.get("/",(req,res)=>{
     res.send('<h1>Hello world hi<h1>')
