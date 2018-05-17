@@ -2,6 +2,7 @@ const express=require("express")
 const nunjucks=require("nunjucks")
 const fs=require("fs")
 
+const port = process.env.port || 3000;
 app=express()
 
 
@@ -53,4 +54,6 @@ app.get("/about",(req,res)=>{
     res.send(x)
 });
 
-app.listen(3000);
+app.listen(port,()=>{
+    console.log(`Server is setup on port ${port}`)
+});
